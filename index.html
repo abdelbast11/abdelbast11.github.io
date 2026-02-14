@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <title>أول صفحة ويب ليا</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحة عبدو</title>
+
+<style>
+/* خلفية متدرجة متحركة */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* حركة الخلفية */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* صندوق المحتوى */
+.container {
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease;
+}
+
+/* دخول النص */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* زر احترافي */
+.btn {
+  background: red;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px red;
+}
+
+/* تأثير المرور */
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px red, 0 0 60px red;
+}
+</style>
+
 </head>
 
 <body>
-    <h1>السلام عليكم 😎</h1>
-    <p>هذه أول صفحة ويب صنعتها</p>
-</body>
 
+<div class="container">
+  <h1>مرحبا بكم في صفحة عبدو</h1>
+
+  <button class="btn"
+    onclick="window.open('https://www.instagram.com/abdo_elkhir','_blank')">
+    للتراسل معي اضغط هنا
+  </button>
+</div>
+
+</body>
 </html>
+
+
